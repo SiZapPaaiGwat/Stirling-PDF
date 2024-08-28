@@ -83,23 +83,23 @@ function toggleDarkMode() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  getElements();
+// document.addEventListener("DOMContentLoaded", function () {
+//   getElements();
 
-  var currentMode = localStorage.getItem("dark-mode");
-  if (currentMode === "on" || currentMode === "off" || currentMode === "rainbow") {
-    setMode(currentMode);
-  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    setMode("on");
-  } else {
-    setMode("off");
-  }
+//   var currentMode = localStorage.getItem("dark-mode");
+//   if (currentMode === "on" || currentMode === "off" || currentMode === "rainbow") {
+//     setMode(currentMode);
+//   } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+//     setMode("on");
+//   } else {
+//     setMode("off");
+//   }
 
-  var darkModeToggle = document.getElementById("dark-mode-toggle");
-  if (darkModeToggle !== null) {
-    darkModeToggle.addEventListener("click", function (event) {
-      event.preventDefault();
-      toggleDarkMode();
-    });
-  }
-});
+//   var darkModeToggle = document.getElementById("dark-mode-toggle");
+//   if (darkModeToggle !== null) {
+//     darkModeToggle.addEventListener("click", function (event) {
+//       event.preventDefault();
+//       toggleDarkMode();
+//     });
+//   }
+// });
