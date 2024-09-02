@@ -168,6 +168,44 @@
                 ></button>
               </div>
               <script>
+                function  showCostIframe() {
+                  const div = document.createElement('div')
+                  div.id = 'cost-container'
+                  div.style.position = 'fixed'
+                  div.style.bottom = '0'
+                  div.style.left = '0'
+                  div.style.width = '100%'
+                  div.style.height = '100%'
+                  div.style.background = 'rgba(0,0,0,0.5)'
+                  div.style.color = 'white'
+                  div.style.textAlign = 'center'
+                  div.style.padding = '10px'
+                  div.style.fontWeight = 'bold'
+                  div.style.zIndex = '1000'
+                  div.style.display = 'flex' // Hide the banner by default
+                  div.style.alignItems = 'center' // Center align the content inside the banner
+                  div.style.justifyContent = 'center' // Center align the content inside the banner
+
+                  var iframe = document.createElement('iframe')
+
+                  // 设置iframe的属性
+                  iframe.src = 'https://xbwl-fe-payment-site.vercel.app/consume'
+                  iframe.width = '400px'
+                  iframe.height = '190px'
+                  iframe.frameBorder = '0' // 去除边框
+                  div.appendChild(iframe)
+
+                  // 将iframe添加到body元素中
+                  document.body.appendChild(div)
+
+                  // 可选：给iframe加载完成添加事件监听
+                  iframe.onload = function () {
+                    console.log('Iframe has been loaded successfully.')
+                  }
+                  setTimeout(() => {
+                    document.body.removeChild(div)
+                  }, 3000)
+                }
                 document
                   .getElementById("download-pdf")
                   .addEventListener("click", async () => {
@@ -181,6 +219,7 @@
                     link.href = URL.createObjectURL(blob);
                     link.download = originalFileName + "_addedImage.pdf";
                     link.click();
+                    showCostIframe()
                   });
               </script>
             </div>

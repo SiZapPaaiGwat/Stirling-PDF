@@ -5,16 +5,12 @@
     const noFavourites = /*[[#{noFavourites}]]*/ "";
     const updateAvailable = /*[[#{settings.updateAvailable}]]*/ "";
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.13.0/qs.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.13.0/firebase-app.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.13.0/firebase-auth.min.js"></script>
-  <script th:src="@{'/js/login.js'}"></script>
   <script th:src="@{'/js/githubVersion.js'}"></script>
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" th:href="@{'/'}" style="display: flex">
         <img class="main-icon" th:src="@{'/favicon.svg'}" alt="icon" />
-        <span class="icon-text" th:text="${@navBarText}"></span>
+        <span class="icon-text" th:text="MyPDFTools"></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -276,8 +272,8 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#" th:href="@{'/pricing'}"
-              th:classappend="${currentPage}=='pricing' ? 'active' : ''" th:title="#{home.pricing.desc}">
+            <a class="nav-link" href="#" th:href="@{'/about'}" th:classappend="${currentPage}=='about' ? 'active' : ''"
+              th:title="#{home.pricing.desc}">
               <span class="icon-text" th:data-text="#{home.pricing.title}" th:text="#{home.pricing.title}"></span>
             </a>
           </li>
@@ -351,9 +347,16 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="login" href="/#continue-with-google" title="Continue with Google">
-              Login
+            <a class="nav-link" id="account" href="https://xbwl-fe-payment-site.vercel.app/continue-with-google">
+              Account
             </a>
+            <!-- <div class="dropdown-menu dropdown-menu-tp" aria-labelledby="searchDropdown">
+              <div style="height: 210px; width: 400px;">
+                <iframe id="login-iframe" src="https://xbwl-fe-payment-site.vercel.app/continue-with-google"
+                  width="100%" height="100%" title="login">
+                </iframe>
+              </div>
+            </div> -->
           </li>
         </ul>
       </div>

@@ -164,13 +164,6 @@ public class GeneralWebController {
         return "split-pdfs";
     }
 
-    @GetMapping("/pricing")
-    @Hidden
-    public String pricingForm(Model model) {
-        model.addAttribute("currentPage", "pricing");
-        return "pricing";
-    }
-
     @GetMapping("/sign")
     @Hidden
     public String signForm(Model model) {

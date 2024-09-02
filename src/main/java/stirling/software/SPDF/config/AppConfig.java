@@ -48,8 +48,9 @@ public class AppConfig {
 
     @Bean(name = "appName")
     public String appName() {
-        String homeTitle = applicationProperties.getUi().getAppName();
-        return (homeTitle != null) ? homeTitle : "Stirling PDF";
+        return "MyPDFTools"
+        // String homeTitle = applicationProperties.getUi().getAppName();
+        // return (homeTitle != null) ? homeTitle : "MyPDFTools";
     }
 
     @Bean(name = "appVersion")
@@ -74,11 +75,12 @@ public class AppConfig {
 
     @Bean(name = "navBarText")
     public String navBarText() {
-        String defaultNavBar =
-                applicationProperties.getUi().getAppNameNavbar() != null
-                        ? applicationProperties.getUi().getAppNameNavbar()
-                        : applicationProperties.getUi().getAppName();
-        return (defaultNavBar != null) ? defaultNavBar : "Stirling PDF";
+        return "MyPDFTools";
+        // String defaultNavBar =
+        //         applicationProperties.getUi().getAppNameNavbar() != null
+        //                 ? applicationProperties.getUi().getAppNameNavbar()
+        //                 : applicationProperties.getUi().getAppName();
+        // return (defaultNavBar != null) ? defaultNavBar : "MyPDFTools";
     }
 
     @Bean(name = "enableAlphaFunctionality")

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html
-  th:lang="${#locale.language}"
-  th:dir="#{language.direction}"
-  th:data-language="${#locale.toString()}"
-  xmlns:th="https://www.thymeleaf.org"
->
-  <head>
-    <th:block th:insert="~{fragments/common :: head(title='<3')}"></th:block>
-  </head>
+<html th:lang="${#locale.language}" th:dir="#{language.direction}" th:data-language="${#locale.toString()}"
+  xmlns:th="https://www.thymeleaf.org">
 
-  <body>
-    <div id="page-container">
-      <div id="content-wrap">
-        <th:block th:insert="~{fragments/navbar.html :: navbar}"></th:block>
-        <br /><br />
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-6 bg-card"></div>
-          </div>
-        </div>
-      </div>
-      <th:block th:insert="~{fragments/footer.html :: footer}"></th:block>
+<head>
+  <th:block th:insert="~{fragments/common :: head(title=#{pricing.title}, header=#{pricing.header})}"></th:block>
+</head>
+
+<body>
+  <div id="page-container">
+    <div id="content-wrap">
+      <th:block th:insert="~{fragments/navbar.html :: navbar}"></th:block>
+      <iframe id="pricing-iframe" src="https://xbwl-fe-payment-site.vercel.app/pricing" width="100%" height="1000px"
+        title="Pricing">
+      </iframe>
     </div>
-  </body>
+    <th:block th:insert="~{fragments/footer.html :: footer}"></th:block>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var iframe = document.getElementById('pricing-iframe');
+      var oWrap = document.getElementById('content-wrap');
+      iframe.style.height = oWrap.clientHeight - 62 + 'px';
+    });
+  </script>
+</body>
+
 </html>

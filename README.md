@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <p align="center"><img src="https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/docs/stirling.png" width="80" ></p>
 <h1 align="center">Stirling-PDF</h1>
 
@@ -13,7 +15,7 @@
 
 This is a robust, locally hosted web-based PDF manipulation tool using Docker. It enables you to carry out various operations on PDF files, including splitting, merging, converting, reorganizing, adding images, rotating, compressing, and more. This locally hosted web application has evolved to encompass a comprehensive set of features, addressing all your PDF requirements.
 
-Stirling PDF does not initiate any outbound calls for record-keeping or tracking purposes.
+MyPDFTools does not initiate any outbound calls for record-keeping or tracking purposes.
 
 All files and PDFs exist either exclusively on the client side, reside in server memory only during task execution, or temporarily reside in a file solely for the execution of the task. Any file downloaded by the user will have been deleted from the server by that point.
 
@@ -108,7 +110,7 @@ Please view https://github.com/Stirling-Tools/Stirling-PDF/blob/main/LocalRunGui
 
 https://hub.docker.com/r/frooodle/s-pdf
 
-Stirling PDF has 3 different versions, a Full version and ultra-Lite version as well as a 'Fat' version. Depending on the types of features you use you may want a smaller image to save on space.
+MyPDFTools has 3 different versions, a Full version and ultra-Lite version as well as a 'Fat' version. Depending on the types of features you use you may want a smaller image to save on space.
 To see what the different versions offer please look at our [version mapping](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/Version-groups.md)
 For people that don't mind about space optimization just use the latest tag.
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/frooodle/s-pdf/latest?label=Stirling-PDF%20Full)
@@ -116,7 +118,7 @@ For people that don't mind about space optimization just use the latest tag.
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/frooodle/s-pdf/latest-fat?label=Stirling-PDF%20Fat)
 
 Please note in below examples you may need to change the volume paths as needed, current examples install them to the current working directory
-eg ``./extraConfigs:/configs`` to ``/opt/stirlingpdf/extraConfigs:/configs``
+eg `./extraConfigs:/configs` to `/opt/stirlingpdf/extraConfigs:/configs`
 
 ### Docker Run
 
@@ -149,8 +151,8 @@ services:
     volumes:
       - ./trainingData:/usr/share/tessdata #Required for extra OCR languages
       - ./extraConfigs:/configs
-#      - ./customFiles:/customFiles/
-#      - ./logs:/logs/
+    #      - ./customFiles:/customFiles/
+    #      - ./logs:/logs/
     environment:
       - DOCKER_ENABLE_SECURITY=false
       - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
@@ -165,46 +167,46 @@ Please view https://github.com/Stirling-Tools/Stirling-PDF/blob/main/HowToUseOCR
 
 ## Supported Languages
 
-Stirling PDF currently supports 38!
+MyPDFTools currently supports 38!
 
-| Language                                    | Progress                               |
-| ------------------------------------------- | -------------------------------------- |
-| Arabic (العربية) (ar_AR)                    | ![44%](https://geps.dev/progress/44)   |
-| Basque (Euskara) (eu_ES)                    | ![60%](https://geps.dev/progress/60)   |
-| Bulgarian (Български) (bg_BG)               | ![92%](https://geps.dev/progress/92)   |
-| Catalan (Català) (ca_CA)                    | ![47%](https://geps.dev/progress/47)   |
-| Croatian (Hrvatski) (hr_HR)                 | ![92%](https://geps.dev/progress/92)   |
-| Czech (Česky) (cs_CZ)                       | ![88%](https://geps.dev/progress/88)   |
-| Danish (Dansk) (da_DK)                      | ![9%](https://geps.dev/progress/9)   |
-| Dutch (Nederlands) (nl_NL)                  | ![94%](https://geps.dev/progress/94)   |
-| English (English) (en_GB)                   | ![100%](https://geps.dev/progress/100) |
-| English (US) (en_US)                        | ![100%](https://geps.dev/progress/100) |
-| French (Français) (fr_FR)                   | ![91%](https://geps.dev/progress/91)   |
-| German (Deutsch) (de_DE)                    | ![98%](https://geps.dev/progress/98) |
-| Greek (Ελληνικά) (el_GR)                    | ![80%](https://geps.dev/progress/80)   |
-| Hindi (हिंदी) (hi_IN)                          | ![75%](https://geps.dev/progress/75)   |
-| Hungarian (Magyar) (hu_HU)                  | ![74%](https://geps.dev/progress/74)   |
-| Indonesia (Bahasa Indonesia) (id_ID)        | ![74%](https://geps.dev/progress/74)   |
-| Irish (Gaeilge) (ga_IE)                     | ![96%](https://geps.dev/progress/96)   |
-| Italian (Italiano) (it_IT)                  | ![99%](https://geps.dev/progress/99)   |
-| Japanese (日本語) (ja_JP)                   | ![90%](https://geps.dev/progress/90)   |
-| Korean (한국어) (ko_KR)                     | ![82%](https://geps.dev/progress/82)   |
-| Norwegian (Norsk) (no_NB)                   | ![96%](https://geps.dev/progress/96)   |
-| Polish (Polski) (pl_PL)                     | ![90%](https://geps.dev/progress/90)   |
-| Portuguese (Português) (pt_PT)              | ![76%](https://geps.dev/progress/76)   |
-| Portuguese Brazilian (Português) (pt_BR)    | ![99%](https://geps.dev/progress/99)   |
-| Romanian (Română) (ro_RO)                   | ![38%](https://geps.dev/progress/38)   |
-| Russian (Русский) (ru_RU)                   | ![82%](https://geps.dev/progress/82)   |
+| Language                                     | Progress                               |
+| -------------------------------------------- | -------------------------------------- |
+| Arabic (العربية) (ar_AR)                     | ![44%](https://geps.dev/progress/44)   |
+| Basque (Euskara) (eu_ES)                     | ![60%](https://geps.dev/progress/60)   |
+| Bulgarian (Български) (bg_BG)                | ![92%](https://geps.dev/progress/92)   |
+| Catalan (Català) (ca_CA)                     | ![47%](https://geps.dev/progress/47)   |
+| Croatian (Hrvatski) (hr_HR)                  | ![92%](https://geps.dev/progress/92)   |
+| Czech (Česky) (cs_CZ)                        | ![88%](https://geps.dev/progress/88)   |
+| Danish (Dansk) (da_DK)                       | ![9%](https://geps.dev/progress/9)     |
+| Dutch (Nederlands) (nl_NL)                   | ![94%](https://geps.dev/progress/94)   |
+| English (English) (en_GB)                    | ![100%](https://geps.dev/progress/100) |
+| English (US) (en_US)                         | ![100%](https://geps.dev/progress/100) |
+| French (Français) (fr_FR)                    | ![91%](https://geps.dev/progress/91)   |
+| German (Deutsch) (de_DE)                     | ![98%](https://geps.dev/progress/98)   |
+| Greek (Ελληνικά) (el_GR)                     | ![80%](https://geps.dev/progress/80)   |
+| Hindi (हिंदी) (hi_IN)                        | ![75%](https://geps.dev/progress/75)   |
+| Hungarian (Magyar) (hu_HU)                   | ![74%](https://geps.dev/progress/74)   |
+| Indonesia (Bahasa Indonesia) (id_ID)         | ![74%](https://geps.dev/progress/74)   |
+| Irish (Gaeilge) (ga_IE)                      | ![96%](https://geps.dev/progress/96)   |
+| Italian (Italiano) (it_IT)                   | ![99%](https://geps.dev/progress/99)   |
+| Japanese (日本語) (ja_JP)                    | ![90%](https://geps.dev/progress/90)   |
+| Korean (한국어) (ko_KR)                      | ![82%](https://geps.dev/progress/82)   |
+| Norwegian (Norsk) (no_NB)                    | ![96%](https://geps.dev/progress/96)   |
+| Polish (Polski) (pl_PL)                      | ![90%](https://geps.dev/progress/90)   |
+| Portuguese (Português) (pt_PT)               | ![76%](https://geps.dev/progress/76)   |
+| Portuguese Brazilian (Português) (pt_BR)     | ![99%](https://geps.dev/progress/99)   |
+| Romanian (Română) (ro_RO)                    | ![38%](https://geps.dev/progress/38)   |
+| Russian (Русский) (ru_RU)                    | ![82%](https://geps.dev/progress/82)   |
 | Serbian Latin alphabet (Srpski) (sr_LATN_RS) | ![76%](https://geps.dev/progress/76)   |
-| Simplified Chinese (简体中文) (zh_CN)       | ![97%](https://geps.dev/progress/97)   |
-| Slovakian (Slovensky) (sk_SK)               | ![90%](https://geps.dev/progress/90)   |
-| Spanish (Español) (es_ES)                   | ![96%](https://geps.dev/progress/96)   |
-| Swedish (Svenska) (sv_SE)                   | ![38%](https://geps.dev/progress/38)   |
-| Thai (ไทย) (th_TH)                          | ![97%](https://geps.dev/progress/97) |
-| Traditional Chinese (繁體中文) (zh_TW)      | ![96%](https://geps.dev/progress/96)   |
-| Turkish (Türkçe) (tr_TR)                    | ![97%](https://geps.dev/progress/97)   |
-| Ukrainian (Українська) (uk_UA)              | ![88%](https://geps.dev/progress/88)   |
-| Vietnamese (Tiếng Việt) (vi_VN)             | ![97%](https://geps.dev/progress/97)   |
+| Simplified Chinese (简体中文) (zh_CN)        | ![97%](https://geps.dev/progress/97)   |
+| Slovakian (Slovensky) (sk_SK)                | ![90%](https://geps.dev/progress/90)   |
+| Spanish (Español) (es_ES)                    | ![96%](https://geps.dev/progress/96)   |
+| Swedish (Svenska) (sv_SE)                    | ![38%](https://geps.dev/progress/38)   |
+| Thai (ไทย) (th_TH)                           | ![97%](https://geps.dev/progress/97)   |
+| Traditional Chinese (繁體中文) (zh_TW)       | ![96%](https://geps.dev/progress/96)   |
+| Turkish (Türkçe) (tr_TR)                     | ![97%](https://geps.dev/progress/97)   |
+| Ukrainian (Українська) (uk_UA)               | ![88%](https://geps.dev/progress/88)   |
+| Vietnamese (Tiếng Việt) (vi_VN)              | ![97%](https://geps.dev/progress/97)   |
 
 ## Contributing (creating issues, translations, fixing bugs, etc.)
 
@@ -212,14 +214,14 @@ Please see our [Contributing Guide](CONTRIBUTING.md)!
 
 ## Customisation
 
-Stirling PDF allows easy customization of the app.
+MyPDFTools allows easy customization of the app.
 Includes things like
 
 - Custom application name
 - Custom slogans, icons, HTML, images CSS etc (via file overrides)
 
-There are two options for this, either using the generated settings file ``settings.yml``
-This file is located in the ``/configs`` directory and follows standard YAML formatting
+There are two options for this, either using the generated settings file `settings.yml`
+This file is located in the `/configs` directory and follows standard YAML formatting
 
 Environment variables are also supported and would override the settings file
 For example in the settings.yml you have
@@ -229,7 +231,7 @@ security:
   enableLogin: 'true'
 ```
 
-To have this via an environment variable you would have ``SECURITY_ENABLELOGIN``
+To have this via an environment variable you would have `SECURITY_ENABLELOGIN`
 
 The Current list of settings is
 
@@ -292,7 +294,7 @@ metrics:
   enabled: true # 'true' to enable Info APIs (`/api/*`) endpoints, 'false' to disable
 ```
 
-There is an additional config file ``/configs/custom_settings.yml`` were users familiar with java and spring application.properties can input their own settings on-top of Stirling-PDFs existing ones
+There is an additional config file `/configs/custom_settings.yml` were users familiar with java and spring application.properties can input their own settings on-top of Stirling-PDFs existing ones
 
 ### Extra notes
 
@@ -301,11 +303,11 @@ There is an additional config file ``/configs/custom_settings.yml`` were users f
 
 ### Environment only parameters
 
-- ``SYSTEM_ROOTURIPATH`` ie set to ``/pdf-app`` to Set the application's root URI to ``localhost:8080/pdf-app``
-- ``SYSTEM_CONNECTIONTIMEOUTMINUTES`` to set custom connection timeout values
-- ``DOCKER_ENABLE_SECURITY`` to tell docker to download security jar (required as true for auth login)
-- ``INSTALL_BOOK_AND_ADVANCED_HTML_OPS`` to download calibre onto stirling-pdf enabling pdf to/from book and advanced html conversion
-- ``LANGS`` to define custom font libraries to install for use for document conversions
+- `SYSTEM_ROOTURIPATH` ie set to `/pdf-app` to Set the application's root URI to `localhost:8080/pdf-app`
+- `SYSTEM_CONNECTIONTIMEOUTMINUTES` to set custom connection timeout values
+- `DOCKER_ENABLE_SECURITY` to tell docker to download security jar (required as true for auth login)
+- `INSTALL_BOOK_AND_ADVANCED_HTML_OPS` to download calibre onto stirling-pdf enabling pdf to/from book and advanced html conversion
+- `LANGS` to define custom font libraries to install for use for document conversions
 
 ## API
 
@@ -319,13 +321,13 @@ For those wanting to use Stirling-PDFs backend API to link with their own custom
 ### Prerequisites
 
 - User must have the folder ./configs volumed within docker so that it is retained during updates.
-- Docker users must download the security jar version by setting ``DOCKER_ENABLE_SECURITY`` to ``true`` in environment variables.
-- Then either enable login via the settings.yml file or via setting ``SECURITY_ENABLE_LOGIN`` to ``true``
-- Now the initial user will be generated with username ``admin`` and password ``stirling``. On login you will be forced to change the password to a new one. You can also use the environment variables ``SECURITY_INITIALLOGIN_USERNAME`` and  ``SECURITY_INITIALLOGIN_PASSWORD`` to set your own straight away (Recommended to remove them after user creation).
+- Docker users must download the security jar version by setting `DOCKER_ENABLE_SECURITY` to `true` in environment variables.
+- Then either enable login via the settings.yml file or via setting `SECURITY_ENABLE_LOGIN` to `true`
+- Now the initial user will be generated with username `admin` and password `stirling`. On login you will be forced to change the password to a new one. You can also use the environment variables `SECURITY_INITIALLOGIN_USERNAME` and `SECURITY_INITIALLOGIN_PASSWORD` to set your own straight away (Recommended to remove them after user creation).
 
 Once the above has been done, on restart, a new stirling-pdf-DB.mv.db will show if everything worked.
 
-When you login to Stirling PDF you will be redirected to /login page to login with those default credentials. After login everything should function as normal
+When you login to MyPDFTools you will be redirected to /login page to login with those default credentials. After login everything should function as normal
 
 To access your account settings go to Account settings in the settings cog menu (top right in navbar) This Account settings menu is also where you find your API key.
 
@@ -347,8 +349,8 @@ For API usage you must provide a header with 'X-API-Key' and the associated API 
 
 ### Q2: Why is my application downloading .htm files?
 
-This is an issue caused commonly by your NGINX configuration. The default file upload size for NGINX is 1MB, you need to add the following in your Nginx sites-available file. ``client_max_body_size SIZE;`` Where "SIZE" is 50M for example for 50MB files.
+This is an issue caused commonly by your NGINX configuration. The default file upload size for NGINX is 1MB, you need to add the following in your Nginx sites-available file. `client_max_body_size SIZE;` Where "SIZE" is 50M for example for 50MB files.
 
 ### Q3: Why is my download timing out
 
-NGINX has timeout values by default so if you are running Stirling-PDF behind NGINX you may need to set a timeout value such as adding the config ``proxy_read_timeout 3600;``
+NGINX has timeout values by default so if you are running Stirling-PDF behind NGINX you may need to set a timeout value such as adding the config `proxy_read_timeout 3600;`
